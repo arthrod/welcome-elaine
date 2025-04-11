@@ -1,0 +1,21 @@
+services:
+  marimo-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PORT=4879
+      - HOST=0.0.0.0
+      - MARIMO_TOKEN=${MARIMO_TOKEN}
+      - PROXY_URL=http://10.0.1.3:80
+    ports:
+      - "4879:4879"
+    volumes:
+      - ./notebooks:/app/notebooks
+    restart: unless-stopped
+    networks:
+      - coolify
+
+networks:
+  coolify:
+    external: true
