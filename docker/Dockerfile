@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.21
-FROM python:3.13-slim
+FROM python:3.14-slim
 
 # Install uv for fast package management
 COPY --from=ghcr.io/astral-sh/uv:0.9.30 /uv /bin/uv
