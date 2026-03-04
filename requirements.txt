@@ -1,1 +1,1 @@
-marimo[lsp]==0.20.3
+marimo[lsp]==0.20.4
