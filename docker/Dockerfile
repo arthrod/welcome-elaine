@@ -2,7 +2,7 @@
 FROM python:3.14-slim
 
 # Install uv for fast package management
-COPY --from=ghcr.io/astral-sh/uv:0.10.9 /uv /bin/uv
+COPY --from=ghcr.io/astral-sh/uv:0.10.10 /uv /bin/uv
 ENV UV_SYSTEM_PYTHON=1
 
 WORKDIR /app
